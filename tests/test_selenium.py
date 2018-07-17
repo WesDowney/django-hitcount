@@ -6,9 +6,9 @@ import unittest
 
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 try:
-    from django.core.urlresolvers import reverse
-except ImportError:
     from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait

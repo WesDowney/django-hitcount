@@ -4,9 +4,9 @@ from __future__ import unicode_literals
 from django.test import TestCase, RequestFactory
 from django.core.exceptions import PermissionDenied
 try:
-    from django.core.urlresolvers import reverse
-except ImportError:
     from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
 from django.contrib.admin.sites import AdminSite
 from django.contrib.messages.storage.fallback import FallbackStorage
 from django.contrib.auth.models import User
